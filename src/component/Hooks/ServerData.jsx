@@ -18,7 +18,7 @@ const ServerData = () => {
             setLoading(false);
 
             count.current = count.current + 1;
-        }, 3000);
+        }, 500);
         // };
     }, []);
 

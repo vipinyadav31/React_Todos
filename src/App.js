@@ -1,12 +1,15 @@
-import Hook from './component/Hooks/hooks/Hook'
-import ServerData from './component/Hooks/hooks/ServerData';
-import Crud from './component/CURD/Crud';
+
+// import ServerData from './component/Hooks/ServerData';
+// import Crud from './component/CURD/Crud';
+// import Form from './component/FormDepth/Form';
+import UncontrolForm from './component/FormDepth/UncontrolForm';
 function App() {
   return (
     <>
-     <Hook />
-    <ServerData />
-    <Crud />
+    {/* <Form /> */}
+    {/* <ServerData /> */}
+    {/* <Crud /> */}
+    <UncontrolForm />
     </>
   );
 }

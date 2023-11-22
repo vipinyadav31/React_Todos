@@ -2,35 +2,35 @@ import React, { useState } from "react";
 
 
 const Form = () => {
-    const [input , setInput] = useState({})
+    const [inputs , setInputs] = useState({
+        Uname : "",
+        Email : "",
+    });
 
      const changeHandler = (event) =>{
-     event.preventDefault();
-     const value  = event.target.value;
-     const   Uname  = event.target.name;
-
-
-     setInput( (values) => ({...values , [Uname] : value}));
+    //  event.preventDefault();
+      const [name , value] = event.target;
+     setInputs( (values) => ({  ...values , [name] : value}));
     
      }
 
-     const handalSubmit =(event) => {
-        event.preventDefault();
-        setInput(event.target.value);
-        // alert(`The User ${input} created sucessfully`)
-    }
+    //  const handalSubmit =(event) => {
+    //     event.preventDefault();
+    //     setInput(event.target.value);
+    //     // alert(`The User ${input} created sucessfully`)
+    // }
     return (
         <div className="d-flex justify-content-center bg-danger p-5 ">
-            <p className="d-flex justify-content-center">Enter details {input}</p>
-            <form className="d-grid  mt-4" onSubmit={handalSubmit}>
+            <p className="d-flex justify-content-center">Enter details {inputs}</p>
+            <form className="d-grid  mt-4" >
                 <label htmlFor="fname"> Username
                 <input
                     type="text"
-                    id="fname"
+                    id="Uname"
                     placeholder="Please Enter name"    
                     name="fname"
                     // value={name}
-                    // value={input}
+                    value={inputs.Uname}
                     onChange={changeHandler}
 
                     
@@ -39,10 +39,11 @@ const Form = () => {
                 <label htmlFor="email">Email</label>
                 <input
                     type="email"
-                    name="email"
+                    name="Email"
                     id="email"
                     placeholder="Plz Enter Email"
                     onChange={changeHandler}
+                    value={inputs.Email}
                 />
                 <button className="mt-2 w-50 bg-success  border rounded p-2">
                     Submit

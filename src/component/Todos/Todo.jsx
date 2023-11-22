@@ -32,28 +32,26 @@ const Todo = () => {
         setListData([]);
     };
     //   const updateTodo = (id, title) => setTodos(todos.map((t) => (t.id === id ? { ...t, title } : t)));
-// setMyArray(oldArray => [...oldArray, newElement]);
+    // setMyArray(oldArray => [...oldArray, newElement]);
 
     const EditHandler = (ind, val) => {
         // setListData((prevTodos) =>     [...prevTodos , val]
-        const arr = [...listData]
-        arr.splice(ind,1,val)
+        const arr = [...listData];
+        arr.splice(ind, 1, val);
         setListData(arr);
-        console.log(arr,'--------')
+        console.log(arr, "--------");
         // setListData(arr.splice(ind,1,val))
 
-            // prevTodos.map((todo, index) => {
-            //     if (ind === index) {
-                     
-                    //return  [...prevTodos , val]
+        // prevTodos.map((todo, index) => {
+        //     if (ind === index) {
 
-     
-            //     } else {
-            //         return todo;
-            //     }
-            //     // return  dat ;
-            // })
-        
+        //return  [...prevTodos , val]
+
+        //     } else {
+        //         return todo;
+        //     }
+        //     // return  dat ;
+        // })
     };
     // main function return here
     return (
@@ -102,7 +100,6 @@ const Todo = () => {
                             </button>
                             <button
                                 className="btn btn-dark m-2 3"
-                                Update
                                 onClick={() =>
                                     EditHandler(index, prompt(" todo", value))
                                 }

@@ -1,0 +1,21 @@
+
+    /* background-color: aqua;
+} */
+option{
+
+    padding: 30px;
+    margin: 30px;
+}
+
+select{
+    margin-left: 10px;
+}
+input{
+
+    box-sizing: border-box;
+    border-radius: 20px;
+    border-style:groove
+}
+.D_serarchBar{
+    margin-left: 50%;
+}

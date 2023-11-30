@@ -71,11 +71,7 @@ const ServerData = () => {
         handerSortAll(selectedvalue);
     };
     // const getSeraches = (query) =>{
-<<<<<<< HEAD
     //  co nst selectedval = posts.filter((items) =>{
-=======
-    //  const selectedval = posts.filter((items) =>{
->>>>>>> b1b614c082bd3a45bc4eef0b7ec048514fb3eddb
     //      return items.title.toLowerCase().includes(query.toLowerCase())
 
     //     //  const deal = <items className="title"></items>

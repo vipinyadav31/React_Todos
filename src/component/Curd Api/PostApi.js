@@ -35,7 +35,7 @@ const PostApi = () => {
                 type="text"
                 id="fname "
                 name="fname"
-                value={infoms.fname}x
+                value={infoms.fname}
                 onChange={changeHendler}
             />
             <label htmlFor="lname">Last name</label>

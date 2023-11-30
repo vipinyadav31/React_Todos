@@ -13,10 +13,18 @@ select{
 input{
 
     box-sizing: border-box;
+<<<<<<< HEAD
     border-radius: 15px;
     border-style:groove
 
 }
 .D_serarchBar{
     margin-left: 50px;
+=======
+    border-radius: 20px;
+    border-style:groove
+}
+.D_serarchBar{
+    margin-left: 50%;
+>>>>>>> b1b614c082bd3a45bc4eef0b7ec048514fb3eddb
 }

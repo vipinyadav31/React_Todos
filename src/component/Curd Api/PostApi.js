@@ -49,31 +49,24 @@ const PostApi = () => {
 
     return (
         <div>
-            <form action="" onSubmit={submitHandler} className="m-5">
-                <label htmlFor="fname">first name</label>
-                <input
-                    type="text"
-                    id="fname "
-                    name="fname"
-                    value={fname}
-                    onChange={(e) => setFname(e.target.value)}
-                />
-                <label htmlFor="lname">Email</label>
-                <input
-                    type="text"
-                    name="email"
-                    id="lname"
-                    value={emails}
-                    onChange={(e) => setEmails(e.target.value)}
-                />
-                {/* <input type="submit" className="btn btn-success" /> */}
-                <button type="submit" className="btn btn-success" > submit</button>
-                {/* <input 
-                type="number" 
-                value={deleteId}
-                    
-                /> */}
-                
+           <form action="" onSubmit={submitHandler}>
+            <label htmlFor="fname">first name</label>
+            <input
+                type="text"
+                id="fname "
+                name="fname"
+                value={infoms.fname}x
+                onChange={changeHendler}
+            />
+            <label htmlFor="lname">Last name</label>
+            <input
+                type="text"
+                name="lname"
+                id="lname"
+                value = {infoms.lname}
+                onChange={changeHendler}
+            />
+            <button type="button"  className="btn btn-success"> Submit </button>
             </form>
              
             

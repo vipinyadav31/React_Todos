@@ -1,58 +1,40 @@
 import React, { useState } from "react";
-// import "./styles.css";
-import axios from "axios";
 
-const Postnew = () => {
-    const [state, setState] = useState({
-        name: "",
-        job: "",
-    });
+const PostApi = () => {
+    const [fname , setFname] = useState('');
+    const [emails , setEmails] = useState('');
 
-    const handleChange = (e) => {
-        const value = e.target.value;
-        setState({
-            ...state,
-            [e.target.name]: value,
-        });
-    };
+     const submitHandler = (e) => {
+       e.preventDefault();
+    //    axios.post("https://jsonplaceholder.typicode.com/users" , userData)
+    //    .then((res) => console.log(res.status ));
+       console.log(fname , emails);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const userData = {
-            name: state.name,
-            job: state.job,
-        };
-        axios.post("https://reqres.in/api/users", userData).then((response) => {
-            console.log(response.status, response.data);
-        });
-    };
+     }
 
     return (
         <div>
-            <h1>Register or Create new account</h1>
-            <hr />
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="name">
-                    Name
-                    <input
-                        type="text"
-                        name="name"
-                        value={state.name}
-                        onChange={handleChange}
-                    />
-                </label>
-                <label htmlFor="job">
-                    Job
-                    <input
-                        type="text"
-                        name="job"
-                        value={state.job}
-                        onChange={handleChange}
-                    />
-                </label>
-                <button type="submit">Register</button>
+           <form action="" onSubmit={submitHandler}>
+            <label htmlFor="fname">first name</label>
+            <input
+                type="text"
+                id="fname "
+                name="fname"
+                value={fname}
+                onChange={(e) =>  setFname(e.target.value)}
+            />
+            <label htmlFor="lname"> Email</label>
+            <input
+                type="text"
+                name="email"
+                id="lname"
+                value = {emails}
+                onChange={(e) => setEmails(e.target.value)}
+            />
+            <button type="submit"  className="btn btn-success"> Submit </button>
             </form>
-        </div>
+       </div>
     );
 };
-export default Postnew;
+
+export default PostApi;

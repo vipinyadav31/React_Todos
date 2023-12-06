@@ -5,15 +5,21 @@
 // import UncontrolForm from './component/FormDepth/UncontrolForm';
 // import NewForm from './component/FormDepth/NewForm';
 // import Todo from './component/Todos/Todo';
+// import PostApi from './component/Curd Api/PostApi'
+// import Postnew from './component/Curd Api/postnew';
+import ApiCurd from "./component/Curd Api/ApiCurd"
 function App() {
   return (
     <>
     {/* <Form /> */}
-    <ServerData />
+    {/* <ServerData /> */}
     {/* <Crud /> */}
     {/* <UncontrolForm /> */}
     {/* <NewForm /> */}
     {/* <Todo /> */}
+    {/* <PostApi /> */}
+    {/* <Postnew /> */}
+    <ApiCurd /> 
     </>
   );
 }
